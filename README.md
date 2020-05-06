@@ -2,7 +2,7 @@
 Uma biblioteca para facilitar o trabalho de leitura e escrita de integrações com layouts TXT
 
 Exemplo para Leitura de Layouts TXT
-`
+```
 $leituraRegistro = new TxtSchema\Reader();
 // DEFINE LAYOUT REGISTRO 6
 $leituraRegistro->addSchemaField(6, 'HEADER', 'HEADER', 1);
@@ -56,10 +56,10 @@ $leituraRegistro->parse();
 // OBTEM ARRAY COM REGISTRO E CAMPOS ASSOCIADOS COMO INDICE
 $arquivoEstruturado = $$leituraRegistro->getData();
 print_r($arquivoEstruturado);
-`
+```
 
 Exemplo para Gravação de Layouts TXT
-`
+```
 $gravaRegistro = new TxtSchema\Writer();
 // DEFINE LAYOUT REGISTRO 6
 $gravaRegistro->addSchemaField(6, 'HEADER', 'HEADER', 1);
@@ -113,4 +113,4 @@ $gravaRegistro->addRow(6, $camposRegistro6);
 // INSERE LINHA REGISTRO 7
 $gravaRegistro->addRow(7, $camposRegistro7);
 $arquivoTxt = $gravaRegistro->getOutput();
-`
+```
